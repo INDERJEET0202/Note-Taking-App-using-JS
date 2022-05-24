@@ -1,0 +1,27 @@
+/* body{
+    background-color: rgb(71, 71, 71);
+} */
+
+.btn{
+    background-color: rgb(71, 71, 71);
+    color: white;
+    border: none;
+    font-family: sans-serif;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    display: grid;
+    margin: auto;
+}
+.row{
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
