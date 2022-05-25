@@ -12,11 +12,22 @@ addBtn.addEventListener('click', function(e){
     else {
         notesObj = JSON.parse(notes);
     }
-    notesObj.push(addTxt.value);
-    localStorage.setItem("notes", JSON.stringify(notesObj));
-    addTxt.value = "";
-    console.log(notesObj);
-    showNotes();
+    if(addTxt.value != ""){
+        notesObj.push(addTxt.value);
+        localStorage.setItem("notes", JSON.stringify(notesObj));
+        addTxt.value = "";
+        console.log(notesObj);
+        showNotes();
+    }
+    else{
+        // alert("Please enter a note");
+        let alertTxt = document.getElementById('alert');
+        alertTxt.innerHTML = 
+        `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Warning!</strong> You have to enter some text to add as a Note.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>`
+    }
 
 })
 
