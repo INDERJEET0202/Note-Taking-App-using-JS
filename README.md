@@ -4,3 +4,4 @@ Simple note taking app using Java Script
   - Store that input in localStorage in an array
   - Display all notes iterating throughout the array
   - User can also search notes
+  - Bootstrap is used for styling
