@@ -18,6 +18,12 @@ addBtn.addEventListener('click', function(e){
         addTxt.value = "";
         console.log(notesObj);
         showNotes();
+        let alertTxt = document.getElementById('alert');
+        alertTxt.innerHTML = 
+        `<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success!</strong> Your note has been added successfully ! Timestamp :&nbsp ${new Date()}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>`
     }
     else{
         // alert("Please enter a note");
@@ -40,12 +46,15 @@ function showNotes(){
         notesObj = JSON.parse(notes);
     }
     let html = "";
+    // let date = new Date();
+    // let today = + " " + date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear();
     notesObj.forEach(function(element, index){
         html += `
         <div class="noteCard my-2 mx-2 card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">Note ${index + 1}</h5>
             <p class="card-text">${element}</p>
+            <!-- <div class="timeStamp">Time stamp :&nbsp; <div id="date"> </div> </div> -->
             <button id="${index}" onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
         </div>
         </div>
