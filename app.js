@@ -18,10 +18,13 @@ addBtn.addEventListener('click', function(e){
         addTxt.value = "";
         console.log(notesObj);
         showNotes();
+        let date = new Date();
+        // Date with time
+        let today = date.getTime() + date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear();
         let alertTxt = document.getElementById('alert');
         alertTxt.innerHTML = 
         `<div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Success!</strong> Your note has been added successfully ! Timestamp :&nbsp ${new Date()}
+            <strong>Success!</strong> Your note has been added successfully ! Timestamp :&nbsp ${new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) }
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>`
     }
