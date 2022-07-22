@@ -1,3 +1,6 @@
+# Website Link
+(Notes App)[https://inderjeet0202.github.io/Note-Taking-App-using-JS/]
+
 # Note-Taking-App-using-JS
 Simple note taking app using Java Script
   - Fetches input form user 
